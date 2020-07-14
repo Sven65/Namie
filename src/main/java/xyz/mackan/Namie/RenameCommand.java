@@ -10,6 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class RenameCommand implements CommandExecutor {
+	// TODO: Rewrite this to use NMS to get rid of the italic names.
 	@Override
 	public boolean onCommand (CommandSender sender, Command command, String label, String[] args) {
 		if (!(sender instanceof Player)) {
