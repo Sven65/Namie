@@ -1,0 +1,35 @@
+name: ${project.name}
+version: ${project.version}
+main: xyz.mackan.Namie.Namie
+description: ${project.description}
+author: Mackan
+api-version: 1.16
+permissions:
+  namie.rename:
+    default: op
+    description: Lets you rename items
+  namie.format.*:
+    default: op
+    description: Lets you use all the formatting
+    children:
+      namie.format.color: true
+      namie.format.general: true
+      namie.format.magic: true
+      namie.format.rgb: true
+  namie.format.color:
+    default: op
+    description: Lets you use color codes for item names
+  namie.format.general:
+    default: op
+    description: Lets you use general formatting for item names
+  namie.format.magic:
+    default: op
+    description: Lets you use &k in item names
+  namie.format.rgb:
+    default: op
+    description: Lets you use RGB colors in item names
+commands:
+  rename:
+    description: Renames the item you're holding
+    permission: namie.rename
+    usage: "Usage: /rename <name>"
